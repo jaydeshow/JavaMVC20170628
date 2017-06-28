@@ -86,5 +86,8 @@ Ctrl + Shift + \   - 取消註解 /*  */
 Alt + Shift + J   - 替Field, Class, Method 加上註解
 
 name="customerid"
-與重新整理redeploy
+與重新整理redeploy 有 cache問題
+
+改用物件傳遞及EL與法display
+透過eclipse把confirm.jsp customers.html歸類到WEB-INF/customers資料夾
 

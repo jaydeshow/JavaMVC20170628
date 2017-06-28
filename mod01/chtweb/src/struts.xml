@@ -22,13 +22,13 @@
 	<package name="customers" namespace="/customers" extends="struts-default">
 		<action name="customersform" class="com.cht.domain.CustomersController">
 			<result name="success" type="dispatcher">
-				/WEB-INF/customers.html
+				/WEB-INF/customers/customers.html
 			</result>
 		</action>
 		<action name="addcustomers" class="com.cht.domain.CustomersController"
 			method="customersSave">
 			<result name="ok" type="dispatcher">
-				/WEB-INF/comfirm.jsp
+				/WEB-INF/customers/comfirm.jsp
 			</result>
 		</action>
 	</package>

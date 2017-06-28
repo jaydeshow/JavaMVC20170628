@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="BIG5"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -26,7 +26,16 @@
 
 <body>
 	OK
-	<br>
+	<br />
+	<!-- 使用EL -->
+	<label>編號:</label> ${customers.customerid}
+	<br />
+	<label>名稱:</label> ${customers.companyname}
+	<br />
+	<label>地址:</label> ${customers.address}
+	<br />
+	<label>電話:</label> ${customers.phone}
+	<br />
 	<!--scriptlet  -->
 	<%=(String) request.getAttribute("customerid")%>
 	<br>

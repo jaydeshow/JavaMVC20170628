@@ -24,6 +24,13 @@ public class CustomersController extends ActionSupport {
 	}
 
 	public String customersSave() {
+		//封裝表單欄位為一個customers物件
+		Customers customers = new Customers();
+		customers.setCustomerid(customerid);
+		customers.setCompanyname(companyname);
+		customers.setAddress(address);
+		customers.setPhone(phone);
+		request.setAttribute("customers", customers);
 		// 進行驗證...
 		// 進行新增作業
 		// request狀態管理
