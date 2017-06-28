@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'hello.jsp' starting page</title>
+    <title>My JSP 'hellostate.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,6 +23,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    Hello world struts2. <br>
+    <!-- jsp as Servlet -->
+    <!--  內建物件request HttpServletRequest Interface -->
+    <%
+    request.getParameter("hello");
+     %>
   </body>
 </html>

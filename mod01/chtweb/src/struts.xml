@@ -11,5 +11,10 @@
 				/WEB-INF/hello.jsp
 			</result>
 		</action>
-	</package>
+		<!-- 手動配上 helloState -->
+		<action name="chthello"
+			class="com.cht.domain.HelloController" method="helloState">
+		<result name="hello" type="dispatcher">
+			/WEB-INF/hellostate.jsp
+		</result></action></package>
 </struts>    

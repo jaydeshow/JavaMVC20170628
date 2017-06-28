@@ -54,4 +54,7 @@ edit -> location /WEB-INF/hello.jsp
 http://localhost:8080/chtweb/WEB-INF/hello.jsp
 HTTP Status 404 -
 
+https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/RequestDispatcher.html
+https://www.javatpoint.com/images/requestdispatcher.JPG
 
+下午交被struts隔離後怎麼跟底層jsp互動
