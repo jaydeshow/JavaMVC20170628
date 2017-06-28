@@ -2,4 +2,10 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 
+	<package name="hello" extends="struts-default">
+		<!-- 部屬 action as class-method..進行控制流程/也是對外的url xxx.action -->
+		<action name="helloworld" class="com.cht.domain.HelloController">
+			<!-- Action Result判斷與派送View -->
+		</action>
+	</package>
 </struts>    
