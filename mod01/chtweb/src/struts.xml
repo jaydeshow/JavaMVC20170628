@@ -6,6 +6,10 @@
 		<!-- 部屬 action as class-method..進行控制流程/也是對外的url xxx.action -->
 		<action name="helloworld" class="com.cht.domain.HelloController">
 			<!-- Action Result判斷與派送View -->
+			<!-- 指向一個View寫個jsp搭配一下 -->
+			<result name="success" type="dispatcher">
+				/WEB-INF/hello.jsp
+			</result>
 		</action>
 	</package>
 </struts>    

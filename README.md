@@ -42,3 +42,16 @@ create 視覺化 hello 不給namespace就是根目錄 繼承structs-default
 myelipse new action->name helloworld->new class com.cht.domain.HelloController
 ctrl+shift+f自動排版，視覺化工具排版不是很好
 
+http://10.131.35.7:8080/chtweb/helloworld.action
+HTTP Status 404 - There is no Action mapped for namespace / and action name helloworld.
+先把他補完，要把action result先加上去
+new action result->name success->result type預設dispatcher->派送到哪一個畫面(view)
+
+只有action派送的道的view，被保護的資料夾WEB-INF
+create jsp ->file path /chtweb/WebRoot/WEB-INF ->file name hello.jsp
+edit -> location /WEB-INF/hello.jsp
+註解不能寫到 (inner text) result tag內
+http://localhost:8080/chtweb/WEB-INF/hello.jsp
+HTTP Status 404 -
+
+
