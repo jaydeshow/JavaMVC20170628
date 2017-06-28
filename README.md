@@ -65,4 +65,16 @@ org.apache.struts2 ServletActionContext
 static javax.servlet.http.HttpServletRequest	getRequest()
 設定request的屬性 request.setAttribute("msg", mesage);
 最後由 jsp呈現 String msg = (String)request.getAttribute("msg");
+http://localhost:8080/chtweb/chthello.action
+
+換成不同派送是否會持續?
+edit 換其他派送方式-redirect 狀態是不會過去的!!
+http://localhost:8080/chtweb/WEB-INF/hellostate.jsp
+HTTP Status 404 -(安全性問題)
+
+加namespace package customers namespace /customers struts-default package
++Action customersform com.cht.domain.CustomersController
++view html5 /WEB-INF/customers.html
++result指向 view
+測試 http://localhost:8080/chtweb/customers/customersform.action
 

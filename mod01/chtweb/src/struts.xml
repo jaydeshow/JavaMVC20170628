@@ -17,4 +17,10 @@
 		<result name="hello" type="dispatcher">
 			/WEB-INF/hellostate.jsp
 		</result></action></package>
-</struts>    
+	<package name="customers" namespace="/customers"
+		extends="struts-default">
+	<action name="customersform"
+		class="com.cht.domain.CustomersController">
+	<result name="success" type="dispatcher">
+		/WEB-INF/customers.html
+	</result></action></package></struts>    

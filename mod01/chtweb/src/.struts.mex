@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="hello" location="106,102" size="400,259">
+    <action name="helloworld" location="19,27" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="hello.jsp" />
+      </result>
+    </action>
+    <action name="chthello" location="65,109" size="149,41">
+      <result name="hello">
+        <resourceEdge source="hello" routing="0" target="hellostate.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="hello.jsp" path="/WEB-INF/hello.jsp" location="530,137" size="150,55" />
+  <webResource name="hellostate.jsp" path="/WEB-INF/hellostate.jsp" location="567,238" size="150,55" />
+  <package name="customers" location="437,437" size="420,177">
+    <action name="customersform" location="252,71" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="customers.html" />
+      </result>
+    </action>
+  </package>
+  <webResource name="customers.html" path="/WEB-INF/customers.html" location="1013,467" size="150,55" />
+</Struts2Diagram>
+
