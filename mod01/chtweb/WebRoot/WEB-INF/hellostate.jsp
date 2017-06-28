@@ -26,7 +26,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- jsp as Servlet -->
     <!--  內建物件request HttpServletRequest Interface -->
     <%
-    request.getParameter("hello");
+    String msg = (String)request.getAttribute("msg");
+    out.print("whatever you want to echo"+msg);
      %>
   </body>
 </html>

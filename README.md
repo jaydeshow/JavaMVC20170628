@@ -58,3 +58,11 @@ https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/RequestDispatc
 https://www.javatpoint.com/images/requestdispatcher.JPG
 
 下午交被struts隔離後怎麼跟底層jsp互動
+
+struts api
+https://struts.apache.org/maven/struts2-core/apidocs/
+org.apache.struts2 ServletActionContext 
+static javax.servlet.http.HttpServletRequest	getRequest()
+設定request的屬性 request.setAttribute("msg", mesage);
+最後由 jsp呈現 String msg = (String)request.getAttribute("msg");
+
