@@ -12,15 +12,19 @@
 			</result>
 		</action>
 		<!-- 手動配上 helloState -->
-		<action name="chthello"
-			class="com.cht.domain.HelloController" method="helloState">
-		<result name="hello" type="dispatcher">
-			/WEB-INF/hellostate.jsp
-		</result></action></package>
-	<package name="customers" namespace="/customers"
-		extends="struts-default">
-	<action name="customersform"
-		class="com.cht.domain.CustomersController">
-	<result name="success" type="dispatcher">
-		/WEB-INF/customers.html
-	</result></action></package></struts>    
+		<action name="chthello" class="com.cht.domain.HelloController"
+			method="helloState">
+			<result name="hello" type="dispatcher">
+				/WEB-INF/hellostate.jsp
+			</result>
+		</action>
+	</package>
+	<package name="customers" namespace="/customers" extends="struts-default">
+		<action name="customersform" class="com.cht.domain.CustomersController">
+			<result name="success" type="dispatcher">
+				/WEB-INF/customers.html
+			</result>
+		</action>
+		<action name="addcustomers"></action>
+	</package>
+</struts>    

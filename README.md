@@ -78,3 +78,4 @@ HTTP Status 404 -(安全性問題)
 +result指向 view
 測試 http://localhost:8080/chtweb/customers/customersform.action
 
+結合動態頁面(JSP)與靜態頁面(HTML5)

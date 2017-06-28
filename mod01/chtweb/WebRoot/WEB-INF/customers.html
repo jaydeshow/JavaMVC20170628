@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>customers.html</title>
-	
-    <meta name="keywords" content="keyword1,keyword2,keyword3">
-    <meta name="description" content="this is my page">
-    <meta name="content-type" content="text/html; charset=BIG5">
-    
-    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<head>
+<title>customers.html</title>
+<!-- 避免亂碼 -->
+<meta charset="UTF-8">
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=utf-8">
 
-  </head>
-  
-  <body>
-    This is my HTML5 page. <br>
-  </body>
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+	<fieldset>
+		<legend>客戶資料維護</legend>
+		<!-- 表單 如何與傳統表單結合 struts -->
+		<form method="post" action="addcustomers.action">
+			<table style="width:500px">
+				<tr>
+					<td>客戶編號</td>
+					<td><input type="text" style="width:300px" /></td>
+				<tr>
+					<td>公司行號</td>
+					<td><input type="text" style="width:300px" /></td>
+				<tr>
+					<td>聯絡地址</td>
+					<td><input type="text" style="width:300px" /></td>
+				<tr>
+					<td>聯絡電話</td>
+					<td><input type="text" style="width:300px" /></td>
+			</table>
+			<input type="submit" value="傳送"> <input type="reset"
+				value="清除">
+		</form>
+	</fieldset>
+</body>
 </html>
