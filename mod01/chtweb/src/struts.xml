@@ -25,6 +25,11 @@
 				/WEB-INF/customers.html
 			</result>
 		</action>
-		<action name="addcustomers"></action>
+		<action name="addcustomers" class="com.cht.domain.CustomersController"
+			method="customersSave">
+			<result name="ok" type="dispatcher">
+				/WEB-INF/comfirm.jsp
+			</result>
+		</action>
 	</package>
 </struts>    

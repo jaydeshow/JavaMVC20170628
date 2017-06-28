@@ -79,3 +79,12 @@ HTTP Status 404 -(安全性問題)
 測試 http://localhost:8080/chtweb/customers/customersform.action
 
 結合動態頁面(JSP)與靜態頁面(HTML5)
+
+Ctrl + /                - 新增/取消註解符號 //
+Ctrl + Shift + /   - 新增註解 /*  */
+Ctrl + Shift + \   - 取消註解 /*  */
+Alt + Shift + J   - 替Field, Class, Method 加上註解
+
+name="customerid"
+與重新整理redeploy
+
