@@ -90,4 +90,30 @@ name="customerid"
 
 改用物件傳遞及EL與法display
 透過eclipse把confirm.jsp customers.html歸類到WEB-INF/customers資料夾
+https://openhome.cc/Gossip/ServletJSP/ELProperty.html
+
+安裝 mysql-installer-community-5.7.18.1.msi
+組態設定都預設 name-pipe 勾一下 root/1111
+
+構思database api層
+https://docs.oracle.com/javase/7/docs/api/index.html?java/sql/Connection.html (frames)
+connection pool jdbc
+javax.sql
+Interface DataSource
+https://commons.apache.org/proper/commons-dbcp/api-1.4/org/apache/commons/dbcp/BasicDataSource.html
+
+Model變化最大 (重複使用 修改成本很大是新建立系統的兩三倍 injection)
+Data Access
+Formula
+Expression
+Rule
+使用 [Design Pattern] Class Factory Pattern &  工廠方法模式(Factory Method Pattern) 
+spring 實現工廠模式 向前相容 改版 抽換零件概念
+
+DataSource開啟連接進入Connection pooling操作底層JDBC
+資料存取的Rule DAO(Data Access Object Pattern)
+實現Dependency Injection(Spring IOC)
+https://projects.spring.io/spring-framework/
+
+JAX-RS (rest)
 
