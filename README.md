@@ -4,3 +4,6 @@
 測試http://10.131.35.7:8080/
 http://localhost:8080/
 
+DD file(https://en.wikipedia.org/wiki/Deployment_descriptor)
+部屬檔案 web.xml
+
