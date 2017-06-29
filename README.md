@@ -162,5 +162,8 @@ https://www.tutorialspoint.com/jsp/jstl_core_foreach_tag.htm
 last_update改用String存(舊方法)顯示會變成2006/2/15 上午 12:00:00
 不用request.setAttribute而改用屬性的方式
 
+改用spring方式屬性注入設定資料連接管理 指向同一個View
+http://localhost:8080/chtweb/customers/countrylist.action
+
 JAX-RS (rest)
 

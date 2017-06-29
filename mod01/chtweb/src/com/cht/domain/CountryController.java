@@ -99,4 +99,9 @@ public class CountryController extends ActionSupport {
 	public void setData(List<Country> data) {
 		this.data = data;
 	}
+	
+	//菜用SpringFramework進行資料查詢
+	public String countrySelect(){
+		return "ok";
+	}
 }

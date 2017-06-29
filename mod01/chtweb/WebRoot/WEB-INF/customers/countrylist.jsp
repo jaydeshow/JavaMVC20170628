@@ -35,7 +35,8 @@
 		//dispatcher 
 		List<Country> datas = (List<Country>) request.getAttribute("data");
 		//區域變數無法做  EL，做成pageContext參考屬性
-		request.setAttribute("datas", datas);
+		//request.setAttribute("datas", datas);
+		pageContext.setAttribute("datas", datas);
 	%>
 	<table style="width:100%" border="1">
 		<tr>

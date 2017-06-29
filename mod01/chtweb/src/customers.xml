@@ -7,4 +7,10 @@
 		class="com.cht.domain.CountryController">
 	<result name="success" type="dispatcher">
 		/WEB-INF/customers/countrylist.jsp
-	</result></action></package></struts>
+	</result></action>
+	<action name="countrylist"
+		class="com.cht.domain.CountryController" method="countrySelect">
+	<result name="ok" type="dispatcher">
+		/WEB-INF/customers/countrylist.jsp
+	</result>
+	</action></package></struts>
