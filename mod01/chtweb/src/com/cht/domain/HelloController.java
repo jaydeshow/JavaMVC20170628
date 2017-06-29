@@ -21,6 +21,7 @@ public class HelloController {
 		// TODO Auto-generated method stub
 		// 處理產生狀態 如何讓狀態state 持續到派送的View去
 		String message = "持續狀態msg";
+		request.setAttribute("msg", message);
 		return "success";
 	}
 

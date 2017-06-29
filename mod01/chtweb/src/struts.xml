@@ -18,7 +18,10 @@
 				/WEB-INF/hellostate.jsp
 			</result>
 		</action>
-	</package>
+		<action name="ognldemo" class="com.cht.domain.HelloController">
+			<result name="success" type="dispatcher">
+				/WEB-INF/ognlview.jsp
+			</result></action></package>
 	<package name="customers" namespace="/customers" extends="struts-default">
 		<action name="customersform" class="com.cht.domain.CustomersController">
 			<result name="success" type="dispatcher">

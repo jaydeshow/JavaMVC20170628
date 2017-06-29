@@ -125,11 +125,25 @@ public class CountryController extends ActionSupport {
 
 		// 直接要窗口物件(DAO->隱含注入一個DataSource) 介面多型化
 		IDao dao = factory.getBean("dao", IDao.class);
-		//查看資料來源物件是否依存著
-		//補getDataSource介面
+		// 查看資料來源物件是否依存著
+		// 補getDataSource介面
 		try {
-			if(!dao.getDataSource().getConnection().isClosed()){
-				msg="dao資料庫連接成功!!";
+			if (!dao.getDataSource().getConnection().isClosed()) {
+				msg = "dao資料庫連接成功!!";
+				ResultSet rs = dao.select("select * from country");
+				// rs.next();// fetch 保持線上
+				// msg = rs.getString("country");
+				// 走訪ResultSet 逐筆處理
+				while (rs.next()) {
+					// 建構Country物件
+					Country country = new Country();
+					country.setCountry_id(rs.getShort("country_id"));
+					country.setCountry(rs.getString("country"));
+					// country.setLast_update(rs.getDate("last_update"));
+					country.setLast_update(rs.getDate("last_update")
+							.toLocaleString());
+					data.add(country);
+				}
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
