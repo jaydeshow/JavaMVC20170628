@@ -24,5 +24,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     countryquery <br>
+    ${msg}
   </body>
 </html>

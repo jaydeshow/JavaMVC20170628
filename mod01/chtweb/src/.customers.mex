@@ -7,6 +7,6 @@
       </result>
     </action>
   </package>
-  <webResource name="countrylist.jsp" path="/WEB-INF/customers/countrylist.jsp" location="615,87" size="150,55" />
+  <webResource name="countrylist.jsp" path="/WEB-INF/customers/countrylist.jsp" location="615,87" size="229,55" />
 </Struts2Diagram>
 

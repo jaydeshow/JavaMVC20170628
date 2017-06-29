@@ -136,6 +136,18 @@ open with struts2 config editor
 把湯姆貓動起來 monitor tomcat ->start redeploy
 http://localhost:8080/chtweb/customers/countryquery.action
 
+用 BasicDataSource database;再用工具補完 (import org.apache.commons.dbcp.BasicDataSource)
+https://www.tutorialspoint.com/jdbc/jdbc-db-connections.htm java database connection url
+
+遇到少打一個 slash的錯誤
+https://stackoverflow.com/questions/38774282/how-to-resolve-cannot-create-jdbc-driver-of-class-com-mysql-jdbc-driver-for-c
+
+StringWriter errors = new StringWriter();
+e.printStackTrace(new PrintWriter(errors));
+msg = "連接失敗!!"+errors.toString();
+故意測密碼錯誤
+連接失敗!!org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: YES)) at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549) at 
+
 
 JAX-RS (rest)
 
