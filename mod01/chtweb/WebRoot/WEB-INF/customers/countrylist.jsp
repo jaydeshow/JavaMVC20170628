@@ -26,6 +26,7 @@
 
 <body>
 	countryquery
-	<br> ${msg}
+	<br> msg: ${msg}
+	<br> data: ${data[0].country}
 </body>
 </html>

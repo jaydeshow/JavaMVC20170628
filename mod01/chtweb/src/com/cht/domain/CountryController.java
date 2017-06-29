@@ -5,12 +5,15 @@ import java.io.StringWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.struts2.ServletActionContext;
 
+import com.cht.entity.Country;
 import com.cht.entity.CountryDao;
 import com.cht.entity.IDao;
 import com.opensymphony.xwork2.ActionSupport;
@@ -20,6 +23,8 @@ public class CountryController extends ActionSupport {
 	private String msg;
 	// 借助 ServletActionContext類別static method 參考出底層的環境
 	private HttpServletRequest request = ServletActionContext.getRequest();
+
+	List<Country> data = new ArrayList<>();
 
 	/**
 	 * @return
@@ -54,15 +59,25 @@ public class CountryController extends ActionSupport {
 		dao.setDataSource(datasource);
 		try {
 			ResultSet rs = dao.select("select * from country");
-			rs.next();
-			msg = rs.getString("country");
+			// rs.next();// fetch 保持線上
+			// msg = rs.getString("country");
+			// 走訪ResultSet 逐筆處理
+			while (rs.next()) {
+				// 建構Country物件
+				Country country = new Country();
+				country.setCountry_id(rs.getShort("country_id"));
+				country.setCountry(rs.getString("country"));
+				country.setLast_update(rs.getDate("last_update"));
+				data.add(country);
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
 			msg = e.getMessage();
 		}
 
-		request.setAttribute("msg", msg);
+		// request.setAttribute("msg", msg);
+		request.setAttribute("data", data);
 		return SUCCESS;
 	}
 }
