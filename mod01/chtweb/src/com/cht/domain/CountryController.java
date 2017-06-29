@@ -9,9 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sql.DataSource;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.cht.entity.Country;
 import com.cht.entity.CountryDao;
@@ -25,6 +28,8 @@ public class CountryController extends ActionSupport {
 	private HttpServletRequest request = ServletActionContext.getRequest();
 
 	List<Country> data = new ArrayList<>();
+	//定義spring bean factory使用xml規範 整合應用系統資源
+	private ApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext.xml");
 
 	/**
 	 * @return
@@ -102,6 +107,19 @@ public class CountryController extends ActionSupport {
 	
 	//菜用SpringFramework進行資料查詢
 	public String countrySelect(){
+		//透過bean factory要一個data source物件
+		//這邊變數請使用interface
+		DataSource dataSource = factory.getBean("dataSource", DataSource.class);
+		try {
+			if(!dataSource.getConnection().isClosed()){
+				msg="資料庫連接成功!!";
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			msg = e.getMessage();
+		}
+		
 		return "ok";
 	}
 }

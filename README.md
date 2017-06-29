@@ -164,6 +164,9 @@ last_update改用String存(舊方法)顯示會變成2006/2/15 上午 12:00:00
 
 改用spring方式屬性注入設定資料連接管理 指向同一個View
 http://localhost:8080/chtweb/customers/countrylist.action
+參考 https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html
+定義工廠 XML規範
+
 
 JAX-RS (rest)
 
