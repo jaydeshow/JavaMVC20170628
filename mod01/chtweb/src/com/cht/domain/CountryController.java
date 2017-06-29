@@ -3,6 +3,7 @@ package com.cht.domain;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.struts2.ServletActionContext;
 
+import com.cht.entity.CountryDao;
+import com.cht.entity.IDao;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CountryController extends ActionSupport {
@@ -30,18 +33,33 @@ public class CountryController extends ActionSupport {
 		datasource.setUrl("jdbc:mysql://localhost:3306/sakila");
 		datasource.setUsername("root");
 		datasource.setPassword("1111");
-		// 借助 datasource配置連接物件
+		// // 借助 datasource配置連接物件
+		// try {
+		// Connection conn = datasource.getConnection();
+		// // 判斷
+		// if (!conn.isClosed()) {
+		// msg = "連接成功!!";
+		// }
+		// } catch (SQLException e) {
+		// // TODO Auto-generated catch block
+		// StringWriter errors = new StringWriter();
+		// e.printStackTrace(new PrintWriter(errors));
+		// msg = "連接失敗!!" + errors.toString();
+		// }
+		//
+
+		// 建構DAO物件 介面操作
+		IDao dao = new CountryDao();
+		// 注入資料來源物件 (property injection)
+		dao.setDataSource(datasource);
 		try {
-			Connection conn = datasource.getConnection();
-			// 判斷
-			if (!conn.isClosed()) {
-				msg = "連接成功!!";
-			}
+			ResultSet rs = dao.select("select * from country");
+			rs.next();
+			msg = rs.getString("country");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			StringWriter errors = new StringWriter();
-			e.printStackTrace(new PrintWriter(errors));
-			msg = "連接失敗!!"+errors.toString();
+			// e.printStackTrace();
+			msg = e.getMessage();
 		}
 
 		request.setAttribute("msg", msg);

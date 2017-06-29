@@ -148,6 +148,11 @@ msg = "連接失敗!!"+errors.toString();
 故意測密碼錯誤
 連接失敗!!org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: YES)) at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549) at 
 
+change workspace encoding to utf-8
+preference->general->workspace->text file encoding 沒成功
+
+1. 借助 datasource配置連接物件
+2. 建構DAO物件 介面操作
 
 JAX-RS (rest)
 
