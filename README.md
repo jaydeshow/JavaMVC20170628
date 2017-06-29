@@ -204,6 +204,13 @@ http://zzy7182.iteye.com/blog/1153473
 用index ref
 驗證是否依從關係正確 view org.apache.commons.dbcp.BasicDataSource@29bf1f29
 
+沒有單元測試不知道錯在哪邊
+寫一段測一段
+
+jdbc丟回來就是一個for object
+要自己封成物件  generic觀念就會在裡面
+自訂查詢結果處理function-callback a delegate
+匿名類別時做RowMapper 建構成物件
 
 JAX-RS (rest)
 

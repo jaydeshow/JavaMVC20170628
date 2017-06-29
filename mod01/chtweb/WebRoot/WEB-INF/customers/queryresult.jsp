@@ -29,5 +29,17 @@
 	查詢還沒寫.
 	<br>
 	<s:property value="dataSource" />
+	<br>
+	<s:property value="customerid" />
+	<br>
+	<s:property value="customer.customer_id" />
+	<br>
+	<s:property value="customer.first_name" />
+	<br>
+	<s:property value="customer.last_name" />
+	<br>
+	<s:property value="customer.email" />
+	<br>
+	<s:property value="customer.last_update" />
 </body>
 </html>
