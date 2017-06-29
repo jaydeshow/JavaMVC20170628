@@ -158,7 +158,9 @@ https://www.tutorialspoint.com/jsp/jstl_core_foreach_tag.htm
 外掛標籤庫
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
+如果不相容自己做
+last_update改用String存(舊方法)顯示會變成2006/2/15 上午 12:00:00
+不用request.setAttribute而改用屬性的方式
 
 JAX-RS (rest)
 

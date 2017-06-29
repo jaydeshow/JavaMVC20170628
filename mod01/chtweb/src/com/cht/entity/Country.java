@@ -17,12 +17,12 @@ public class Country implements Serializable {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public Date getLast_update() {
+	public String getLast_update() {
 		return last_update;
 	}
-	public void setLast_update(Date last_update) {
-		this.last_update = last_update;
+	public void setLast_update(String string) {
+		this.last_update = string;
 	}
 	private String country;
-	private Date last_update;
+	private String last_update;
 }

@@ -67,7 +67,8 @@ public class CountryController extends ActionSupport {
 				Country country = new Country();
 				country.setCountry_id(rs.getShort("country_id"));
 				country.setCountry(rs.getString("country"));
-				country.setLast_update(rs.getDate("last_update"));
+				//country.setLast_update(rs.getDate("last_update"));
+				country.setLast_update(rs.getDate("last_update").toLocaleString());
 				data.add(country);
 			}
 		} catch (SQLException e) {
@@ -77,7 +78,25 @@ public class CountryController extends ActionSupport {
 		}
 
 		// request.setAttribute("msg", msg);
-		request.setAttribute("data", data);
+		//request.setAttribute("data", data);
 		return SUCCESS;
+	}
+
+	// sttter and getter(Property)
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+
+	public List<Country> getData() {
+		return data;
+	}
+
+	public void setData(List<Country> data) {
+		this.data = data;
 	}
 }
