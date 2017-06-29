@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-	<package name="sakila" namespace="/customers"
-		extends="struts-default">
-	<action name="countryquery"
-		class="com.cht.domain.CountryController">
-	<result name="success" type="dispatcher">
-		/WEB-INF/customers/countrylist.jsp
-	</result></action>
-	<action name="countrylist"
-		class="com.cht.domain.CountryController" method="countrySelect">
-	<result name="ok" type="dispatcher">
-		/WEB-INF/customers/countrylist.jsp
-	</result>
-	</action></package></struts>
+	<package name="sakila" namespace="/customers" extends="struts-default">
+		<action name="countryquery" class="com.cht.domain.CountryController">
+			<result name="success" type="dispatcher">
+				/WEB-INF/customers/countrylist.jsp
+			</result>
+		</action>
+		<action name="countrylist" class="com.cht.domain.CountryController"
+			method="countrySelect">
+			<result name="ok" type="dispatcher">
+				/WEB-INF/customers/countrylist.jsp
+			</result>
+		</action>
+		<action name="customerqryid" class="com.cht.domain.ChtCustomersController"
+			method="select" >
+			<result name="success" type="dispatcher">
+				/WEB-INF/customers/customersform.jsp
+			</result>
+		</action>
+	</package>
+</struts>

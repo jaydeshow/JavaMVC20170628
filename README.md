@@ -174,5 +174,12 @@ http://localhost:8080/chtweb/customers/countrylist.action
 http://langgufu.iteye.com/blog/2111706
 影藏JAVA語法全部用標籤呈現
 
+不是所有html5標籤都支援的
+https://html5test.com/
+
+action configure在類別上描述而非在描述檔XML
+init-method未定義
+
+
 JAX-RS (rest)
 

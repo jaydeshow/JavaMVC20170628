@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Struts2Diagram version="2.0">
-  <package name="sakila" location="87,57" size="318,144">
-    <action name="countryquery" location="11,30" size="150,41">
+  <package name="sakila" location="87,57" size="318,263">
+    <action name="countryquery" location="12,31" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="countrylist.jsp" />
       </result>
     </action>
-    <action name="countrylist" location="11,90" size="150,41">
+    <action name="countrylist" location="12,91" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="countrylist.jsp" />
       </result>
     </action>
+    <action name="customerqryid" location="10,169" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="customersform.jsp" />
+      </result>
+    </action>
   </package>
   <webResource name="countrylist.jsp" path="/WEB-INF/customers/countrylist.jsp" location="615,87" size="150,55" />
+  <webResource name="customersform.jsp" path="/WEB-INF/customers/customersform.jsp" location="620,230" size="150,55" />
 </Struts2Diagram>
 
