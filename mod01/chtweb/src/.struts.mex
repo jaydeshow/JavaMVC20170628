@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Struts2Diagram version="2.0">
-  <package name="hello" location="106,102" size="400,259">
-    <action name="helloworld" location="31,39" size="150,41">
+  <package name="hello" location="106,102" size="400,200">
+    <action name="helloworld" location="32,40" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="hello.jsp" />
       </result>
     </action>
-    <action name="chthello" location="30,122" size="149,41">
+    <action name="chthello" location="31,123" size="149,41">
       <result name="hello">
         <resourceEdge source="hello" routing="0" target="hellostate.jsp" />
       </result>
     </action>
   </package>
   <package name="customers" location="97,412" size="420,177">
-    <action name="customersform" location="36,43" size="150,41">
+    <action name="customersform" location="37,44" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="customers.html" />
       </result>
     </action>
-    <action name="addcustomers" location="38,117" size="150,41">
+    <action name="addcustomers" location="39,118" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="comfirm.jsp" />
       </result>
@@ -28,5 +28,6 @@
   <webResource name="hellostate.jsp" path="/WEB-INF/hellostate.jsp" location="613,239" size="150,55" />
   <webResource name="customers.html" path="/WEB-INF/customers/customers.html" location="608,446" size="150,55" />
   <webResource name="comfirm.jsp" path="/WEB-INF/customers/comfirm.jsp" location="609,528" size="150,55" />
+  <include file="customers.xml" location="825,198" size="150,30" />
 </Struts2Diagram>
 

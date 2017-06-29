@@ -124,5 +124,18 @@ AOP可以作稽核(LOG)
 要勾spring persistence 其他預設
 然後redeploy 把jar檔佈到執行階段...
 
+練習一個簡單對資料庫的查詢(action)
+
+include另一個組態配置 customers.xml
+open with struts2 config editor
+
+作package sakila /customers struts-default
++action countryquery com.cht.domain.CountryController 痘痘兩下
++jsp
++action result
+把湯姆貓動起來 monitor tomcat ->start redeploy
+http://localhost:8080/chtweb/customers/countryquery.action
+
+
 JAX-RS (rest)
 

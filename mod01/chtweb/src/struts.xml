@@ -32,4 +32,4 @@
 			</result>
 		</action>
 	</package>
-</struts>    
+<include file="customers.xml"></include></struts>    
