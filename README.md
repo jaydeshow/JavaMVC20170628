@@ -169,5 +169,10 @@ http://localhost:8080/chtweb/customers/countrylist.action
 
 改嘗試dao物件連接成功
 
+改嘗試OGNL EL
+變數類似，算術運算則是不同
+http://langgufu.iteye.com/blog/2111706
+影藏JAVA語法全部用標籤呈現
+
 JAX-RS (rest)
 
