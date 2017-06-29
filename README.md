@@ -196,6 +196,8 @@ http://localhost:8080/chtweb/querydata.action
 message No result defined for action com.cht.domain.ChtCustomersController and result success
 沒有指定method name methodname大小寫要一樣
 
+使用Spring JDBCTemplate
+
 
 JAX-RS (rest)
 

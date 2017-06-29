@@ -76,7 +76,7 @@
 	</fieldset>
 	<br>
 	<!-- struts ognl form field layout -->
-	<s:form action="/customers/querydata.action">
+	<s:form namespace="/customers" action="querydata">
 		<s:textfield label="客戶號碼" name="customerid" value="%{customerid}" id="customerid">客戶編號</s:textfield>
 		<s:submit label="查詢" value="查察" id="btnQuery"></s:submit>
 	</s:form>
