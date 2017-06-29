@@ -153,6 +153,12 @@ preference->general->workspace->text file encoding 沒成功
 
 1. 借助 datasource配置連接物件
 2. 建構DAO物件 介面操作
+3. 建構Country對應class arraylist處理及EL display 後面用jstl foreach (可以搭配EL)
+https://www.tutorialspoint.com/jsp/jstl_core_foreach_tag.htm
+外掛標籤庫
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 
 JAX-RS (rest)
 
