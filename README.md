@@ -115,5 +115,14 @@ DataSource開啟連接進入Connection pooling操作底層JDBC
 實現Dependency Injection(Spring IOC)
 https://projects.spring.io/spring-framework/
 
+20170629
+spring下載官方網站 https://projects.spring.io/spring-framework/
+
+install spring facet 3.1
+applicationContext.xml 可以改，用xml做部屬不建議先做annotation(寫在類別裡彈性不大)慢慢來
+AOP可以作稽核(LOG)
+要勾spring persistence 其他預設
+然後redeploy 把jar檔佈到執行階段...
+
 JAX-RS (rest)
 
