@@ -197,6 +197,12 @@ message No result defined for action com.cht.domain.ChtCustomersController and r
 沒有指定method name methodname大小寫要一樣
 
 使用Spring JDBCTemplate
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html
+JdbcTemplate(DataSource dataSource)
+建構子注入
+http://zzy7182.iteye.com/blog/1153473
+用index ref
+驗證是否依從關係正確 view org.apache.commons.dbcp.BasicDataSource@29bf1f29
 
 
 JAX-RS (rest)

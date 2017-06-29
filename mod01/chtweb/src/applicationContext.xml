@@ -19,4 +19,9 @@
 		<!-- 屬性注入DI(依存關係注入) -->
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	<!-- jdbctemplate bean -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<!-- contructor injection -->
+		<constructor-arg index="0" ref="dataSource" />
+	</bean>
 </beans>
