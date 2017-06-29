@@ -180,6 +180,13 @@ https://html5test.com/
 action configure在類別上描述而非在描述檔XML
 init-method未定義
 
+停用tomcat 用run的 tom 8x就會有console訊息...
+Caused by: 元素類型 "action" 必須宣告屬性 "init-method"。 - file:/C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%208.0/webapps/chtweb/WEB-INF/classes/customers.xml:17:52
+	at com.opensymphony.xwork2.util.DomHelper.parse(DomHelper.java:115)
+
+client side validation
+動態標籤如何jquery??
+用選擇器的觀念去參考動態標籤
 
 JAX-RS (rest)
 
