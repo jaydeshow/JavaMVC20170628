@@ -30,7 +30,22 @@
 	$(document).ready(
 	//匿名事件
 	function() {
-		alert("hello jquery!!")
+		//alert("hello jquery!!")
+		//選擇id
+		$('#btnQuery').click(
+			//查詢按鈕引發事件程序
+			function(e){
+				//查詢內容沒有輸入
+				var el=$('#customerid');
+				//alert(el);
+				if(el.val().length==0)
+				{
+					alert('查詢質尚未輸入');
+					e.preventDefault(); //剎車
+				}
+				
+			}
+		);
 	});
 </script>
 </head>
@@ -61,9 +76,9 @@
 	</fieldset>
 	<br>
 	<!-- struts ognl form field layout -->
-	<s:form>
-		<s:textfield label="客戶號碼" name="customerid" value="%{customerid}">客戶編號</s:textfield>
-		<s:submit label="查詢" value="查察"></s:submit>
+	<s:form action="/customers/querydata.action">
+		<s:textfield label="客戶號碼" name="customerid" value="%{customerid}" id="customerid">客戶編號</s:textfield>
+		<s:submit label="查詢" value="查察" id="btnQuery"></s:submit>
 	</s:form>
 	<s:property value="message" />
 	<br>

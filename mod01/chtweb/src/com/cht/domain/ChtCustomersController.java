@@ -30,7 +30,6 @@ public class ChtCustomersController extends ActionSupport {
 		// TODO Auto-generated method stub
 		// 判斷有輸入內容的時候進行查詢 nullpointerException
 		if (customerid.length() > 0) {
-
 			customerid = "B001";
 		}
 		message = "查詢成功!!";
@@ -40,5 +39,14 @@ public class ChtCustomersController extends ActionSupport {
 	// 初始畫method
 	public void selectInitializer() {
 		// 誰會把我這個動起來RR?
+	}
+
+	public void prepareSelect() {
+		customerid = "B002";
+	}
+
+	// 查詢作業
+	public String queryByID() {
+		return "ok";
 	}
 }

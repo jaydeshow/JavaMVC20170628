@@ -14,9 +14,15 @@
 			</result>
 		</action>
 		<action name="customerqryid" class="com.cht.domain.ChtCustomersController"
-			method="select" >
+			method="select">
 			<result name="success" type="dispatcher">
 				/WEB-INF/customers/customersform.jsp
+			</result>
+		</action>
+		<action name="querydata" class="com.cht.domain.ChtCustomersController"
+			method="queryByID">
+			<result name="ok" type="dispatcher">
+				/WEB-INF/customers/queryresult.jsp
 			</result>
 		</action>
 	</package>

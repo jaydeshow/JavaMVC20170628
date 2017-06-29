@@ -188,5 +188,14 @@ client side validation
 動態標籤如何jquery??
 用選擇器的觀念去參考動態標籤
 
+我們不要去動標籤，click用前端去控制補一下
+
+命名空間不會過來
+http://localhost:8080/chtweb/querydata.action
+
+message No result defined for action com.cht.domain.ChtCustomersController and result success
+沒有指定method name methodname大小寫要一樣
+
+
 JAX-RS (rest)
 
