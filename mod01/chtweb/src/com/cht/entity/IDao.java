@@ -11,4 +11,5 @@ public interface IDao {
 
 	// 強制注入屬性 存取封裝藍為
 	public void setDataSource(DataSource datasource);
+	public DataSource getDataSource();
 }

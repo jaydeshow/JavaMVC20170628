@@ -28,8 +28,9 @@ public class CountryController extends ActionSupport {
 	private HttpServletRequest request = ServletActionContext.getRequest();
 
 	List<Country> data = new ArrayList<>();
-	//定義spring bean factory使用xml規範 整合應用系統資源
-	private ApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext.xml");
+	// 定義spring bean factory使用xml規範 整合應用系統資源
+	private ApplicationContext factory = new ClassPathXmlApplicationContext(
+			"applicationContext.xml");
 
 	/**
 	 * @return
@@ -72,8 +73,9 @@ public class CountryController extends ActionSupport {
 				Country country = new Country();
 				country.setCountry_id(rs.getShort("country_id"));
 				country.setCountry(rs.getString("country"));
-				//country.setLast_update(rs.getDate("last_update"));
-				country.setLast_update(rs.getDate("last_update").toLocaleString());
+				// country.setLast_update(rs.getDate("last_update"));
+				country.setLast_update(rs.getDate("last_update")
+						.toLocaleString());
 				data.add(country);
 			}
 		} catch (SQLException e) {
@@ -83,7 +85,7 @@ public class CountryController extends ActionSupport {
 		}
 
 		// request.setAttribute("msg", msg);
-		//request.setAttribute("data", data);
+		// request.setAttribute("data", data);
 		return SUCCESS;
 	}
 
@@ -104,22 +106,36 @@ public class CountryController extends ActionSupport {
 	public void setData(List<Country> data) {
 		this.data = data;
 	}
-	
-	//菜用SpringFramework進行資料查詢
-	public String countrySelect(){
-		//透過bean factory要一個data source物件
-		//這邊變數請使用interface
-		DataSource dataSource = factory.getBean("dataSource", DataSource.class);
+
+	// 菜用SpringFramework進行資料查詢
+	public String countrySelect() {
+		// //透過bean factory要一個data source物件
+		// //這邊變數請使用interface
+		// DataSource dataSource = factory.getBean("dataSource",
+		// DataSource.class);
+		// try {
+		// if(!dataSource.getConnection().isClosed()){
+		// msg="資料庫連接成功!!";
+		// }
+		// } catch (SQLException e) {
+		// // TODO Auto-generated catch block
+		// // e.printStackTrace();
+		// msg = e.getMessage();
+		// }
+
+		// 直接要窗口物件(DAO->隱含注入一個DataSource) 介面多型化
+		IDao dao = factory.getBean("dao", IDao.class);
+		//查看資料來源物件是否依存著
+		//補getDataSource介面
 		try {
-			if(!dataSource.getConnection().isClosed()){
-				msg="資料庫連接成功!!";
+			if(!dao.getDataSource().getConnection().isClosed()){
+				msg="dao資料庫連接成功!!";
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-//			e.printStackTrace();
 			msg = e.getMessage();
 		}
-		
+
 		return "ok";
 	}
 }

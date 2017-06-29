@@ -167,6 +167,7 @@ http://localhost:8080/chtweb/customers/countrylist.action
 參考 https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/support/ClassPathXmlApplicationContext.html
 定義工廠 XML規範
 
+改嘗試dao物件連接成功
 
 JAX-RS (rest)
 

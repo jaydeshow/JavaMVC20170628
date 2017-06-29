@@ -35,4 +35,10 @@ public class CountryDao implements IDao {
 
 	}
 
+	@Override
+	public DataSource getDataSource() {
+		// TODO Auto-generated method stub
+		return dataSource;
+	}
+
 }

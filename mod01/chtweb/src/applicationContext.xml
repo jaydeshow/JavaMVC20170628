@@ -14,4 +14,9 @@
 		<property name="username" value="root"></property>
 		<property name="password" value="1111"></property>
 	</bean>
+	<!-- 部屬DAO物件 -->
+	<bean id="dao" class="com.cht.entity.CountryDao">
+		<!-- 屬性注入DI(依存關係注入) -->
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
 </beans>
