@@ -225,5 +225,10 @@ label是前面的TD名稱文字提示
 找到!! listValue = "alias" listKey="aliasid" 
 https://stackoverflow.com/questions/22420421/setting-a-struts2-select-tag-to-a-variable-from-the-request-object
 
+進行ajax invoke server-side REST Service
+自己加一層table 加一些自訂表格內容才不會display時亂跑
+down一下jquery的框架 
+cross site issue?
+
 JAX-RS (rest)
 

@@ -148,6 +148,12 @@ public class ChtCustomersController extends ActionSupport {
 
 	// 新增客戶資料
 	public String execute() {
+		customers = new Customers();
+		customers.setCustomerid("C001");
 		return SUCCESS;
+	}
+	
+	public String customersSave(){
+		return "ok";
 	}
 }
