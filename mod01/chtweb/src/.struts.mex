@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Struts2Diagram version="2.0">
-  <package name="hello" location="50,50" size="182,272">
-    <action name="helloworld" location="23,31" size="150,41">
+  <package name="hello" location="50,50" size="182,357">
+    <action name="helloworld" location="30,38" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="hello.jsp" />
       </result>
     </action>
-    <action name="chthello" location="23,123" size="150,41">
+    <action name="chthello" location="30,130" size="150,41">
       <result name="hello">
         <resourceEdge source="hello" routing="0" target="hellostate.jsp" />
       </result>
     </action>
-    <action name="ognldemo" location="23,223" size="150,41">
+    <action name="ognldemo" location="30,230" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="ognlview.jsp" />
       </result>
     </action>
+    <action name="beanshow" location="31,305" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="beanshow.jsp" />
+      </result>
+    </action>
   </package>
   <package name="customers" location="49,424" size="182,172">
-    <action name="customersform" location="23,31" size="150,41">
+    <action name="customersform" location="30,38" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="customers.html" />
       </result>
     </action>
-    <action name="addcustomers" location="23,123" size="150,41">
+    <action name="addcustomers" location="30,130" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="comfirm.jsp" />
       </result>
@@ -32,8 +37,9 @@
   <webResource name="hello.jsp" path="/WEB-INF/hello.jsp" location="339,60" size="150,55" />
   <webResource name="hellostate.jsp" path="/WEB-INF/hellostate.jsp" location="337,178" size="150,55" />
   <webResource name="ognlview.jsp" path="/WEB-INF/ognlview.jsp" location="339,271" size="150,55" />
-  <webResource name="customers.html" path="/WEB-INF/customers/customers.html" location="347,427" size="150,55" />
+  <webResource name="customers.html" path="/WEB-INF/customers/customers.html" location="344,449" size="150,55" />
   <webResource name="comfirm.jsp" path="/WEB-INF/customers/comfirm.jsp" location="355,536" size="150,55" />
   <include file="customers.xml" location="697,315" size="150,30" />
+  <webResource name="beanshow.jsp" path="/WEB-INF/beanshow.jsp" location="339,361" size="150,55" />
 </Struts2Diagram>
 

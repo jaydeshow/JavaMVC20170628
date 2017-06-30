@@ -259,3 +259,8 @@ cross site
 
 https://onsen.io/
 
+完成整個customers資料
+
+還沒講到 listener interceptor 
+把controller當一個bean來佈署
+給spring裡面的bean id可以對過來嗎 可以
