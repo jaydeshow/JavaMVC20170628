@@ -253,3 +253,5 @@ http://localhost:8080/chtweb/service/customers/cidvalid?cid=001
 XMLHttpRequest cannot load http://10.131.35.7:8080/chtweb/service/customers/cidvalid?cid=C001. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8080' is therefore not allowed access. The response had HTTP status code 403.
 cross site
 安全性考量 不是那麼簡單
+
+先用localhost  result.msg (json tag)

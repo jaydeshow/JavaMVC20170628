@@ -57,7 +57,7 @@
 			//選擇文字輸入方塊(客戶編號id)
 			var cid =$('#customerid');
 			var cidvalue = cid.val();
-			var urlString = "http://10.131.35.7:8080/chtweb/service/customers/cidvalid?cid=" + cidvalue;
+			var urlString = "http://localhost:8080/chtweb/service/customers/cidvalid?cid=" + cidvalue;
 			//alert(cidvalue);
 			//ajax非同步呼叫後端服務傳遞資訊或取回傳的json
 			$.ajax({
@@ -65,7 +65,7 @@
 				type: 'GET',
 				//成功回乎程序
 				success : function(result,status,xhr) {
-					alert("GET成功!!" + result)
+					alert("GET成功!!" + result.msg)
 				}
 			});
 
