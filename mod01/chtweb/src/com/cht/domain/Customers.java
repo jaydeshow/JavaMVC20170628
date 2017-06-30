@@ -5,7 +5,14 @@ public class Customers {
 	private String companyname;
 	private String address;
 	private String phone;
+	private int aliasid;
 	
+	public int getAliasid() {
+		return aliasid;
+	}
+	public void setAliasid(int aliasid) {
+		this.aliasid = aliasid;
+	}
 	public String getCustomerid() {
 		return customerid;
 	}

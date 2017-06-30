@@ -25,5 +25,9 @@
 				/WEB-INF/customers/queryresult.jsp
 			</result>
 		</action>
-	</package>
+		<action name="customeradd"
+			class="com.cht.domain.ChtCustomersController">
+		<result name="success" type="dispatcher">
+			/WEB-INF/customers/customersmaintform.jsp
+		</result></action></package>
 </struts>

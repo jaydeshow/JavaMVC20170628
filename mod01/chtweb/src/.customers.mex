@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Struts2Diagram version="2.0">
-  <package name="sakila" location="87,57" size="200,284">
-    <action name="countryquery" location="13,32" size="150,41">
+  <package name="sakila" location="87,57" size="200,355">
+    <action name="countryquery" location="18,37" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="countrylist.jsp" />
       </result>
     </action>
-    <action name="countrylist" location="13,92" size="150,41">
+    <action name="countrylist" location="18,97" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="countrylist.jsp" />
       </result>
     </action>
-    <action name="customerqryid" location="11,170" size="150,41">
+    <action name="customerqryid" location="16,175" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="customersform.jsp" />
       </result>
     </action>
-    <action name="querydata" location="9,228" size="150,40">
+    <action name="querydata" location="14,233" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="queryresult.jsp" />
+      </result>
+    </action>
+    <action name="customeradd" location="18,299" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="customersmaintform.jsp" />
       </result>
     </action>
   </package>
   <webResource name="countrylist.jsp" path="/WEB-INF/customers/countrylist.jsp" location="615,87" size="150,55" />
   <webResource name="customersform.jsp" path="/WEB-INF/customers/customersform.jsp" location="620,230" size="150,55" />
   <webResource name="queryresult.jsp" path="/WEB-INF/customers/queryresult.jsp" location="622,300" size="150,55" />
+  <webResource name="customersmaintform.jsp" path="/WEB-INF/customers/customersmaintform.jsp" location="622,383" size="150,55" />
 </Struts2Diagram>
 

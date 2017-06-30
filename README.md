@@ -212,5 +212,10 @@ jdbc丟回來就是一個for object
 自訂查詢結果處理function-callback a delegate
 匿名類別時做RowMapper 建構成物件
 
+20170630
+帶一點OGNL input form 怎麼結合model 與 controller
+
+FK與下拉式功能表aliasid
+
 JAX-RS (rest)
 
