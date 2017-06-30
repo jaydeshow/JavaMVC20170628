@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Struts2Diagram version="2.0">
-  <package name="sakila" location="87,57" size="200,410">
-    <action name="countryquery" location="19,38" size="150,41">
+  <package name="sakila" location="87,57" size="200,471">
+    <action name="countryquery" location="26,45" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="countrylist.jsp" />
       </result>
     </action>
-    <action name="countrylist" location="19,98" size="150,41">
+    <action name="countrylist" location="26,105" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="countrylist.jsp" />
       </result>
     </action>
-    <action name="customerqryid" location="17,176" size="150,41">
+    <action name="customerqryid" location="24,183" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="customersform.jsp" />
       </result>
     </action>
-    <action name="querydata" location="15,234" size="150,41">
+    <action name="querydata" location="22,241" size="150,41">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="queryresult.jsp" />
       </result>
     </action>
-    <action name="customeradd" location="19,300" size="150,41">
+    <action name="customeradd" location="26,307" size="150,41">
       <result name="success">
         <resourceEdge source="success" routing="0" target="customersmaintform.jsp" />
       </result>
     </action>
-    <action name="save" location="18,359" size="150,41">
+    <action name="save" location="25,366" size="150,62">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="saveok.jsp" />
+      </result>
+      <result name="failure">
+        <resourceEdge source="failure" routing="0" target="failure.jsp" />
       </result>
     </action>
   </package>
@@ -37,5 +40,6 @@
   <webResource name="queryresult.jsp" path="/WEB-INF/customers/queryresult.jsp" location="622,300" size="150,55" />
   <webResource name="customersmaintform.jsp" path="/WEB-INF/customers/customersmaintform.jsp" location="623,359" size="150,55" />
   <webResource name="saveok.jsp" path="/WEB-INF/customers/saveok.jsp" location="625,419" size="150,55" />
+  <webResource name="failure.jsp" path="/WEB-INF/customers/failure.jsp" location="630,487" size="150,55" />
 </Struts2Diagram>
 

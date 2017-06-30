@@ -52,9 +52,9 @@ public class ChtCustomersController extends ActionSupport {
 		for (int s = 0; s < result.size(); s++) {
 			// 相對記錄Map
 			Map<String, Object> record = result.get(s);
-			//建構自定模組
+			// 建構自定模組
 			Alias area = new Alias();
-			//注入欄位資訊
+			// 注入欄位資訊
 			area.setAliasid(Integer.parseInt(record.get("aliasid").toString()));
 			area.setAlias(record.get("alias").toString());
 			alias.add(area);
@@ -156,8 +156,24 @@ public class ChtCustomersController extends ActionSupport {
 		customers.setAliasid(2);
 		return SUCCESS;
 	}
-	
-	public String customersSave(){
-		return "ok";
+
+	public String customersSave() {
+		// 客戶編號是否重複輸入??(同步...)
+		// 驗證ok
+		// 取出 dao
+		JdbcTemplate dao = factory.getBean("jdbcTemplate", JdbcTemplate.class);
+		// ->ORM 進行物件新增->同步到資料庫去??
+		String insertString = "insert into customers (customerid,companyname,address,phone,aliasid) values(?,?,?,?,?)";
+		// 影響記錄數
+		int number = dao.update(
+				insertString,
+				new Object[] { customers.getCustomerid(),
+						customers.getCompanyname(), customers.getAddress(),
+						customers.getPhone(), customers.getAliasid() });
+		//應該用try catch
+		if (number > 0)
+			return "ok";
+		else
+			return "failure";
 	}
 }

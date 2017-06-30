@@ -35,6 +35,8 @@
 			<result name="ok" type="dispatcher">
 				/WEB-INF/customers/saveok.jsp
 			</result>
-		</action>
+			<result name="failure" type="dispatcher">
+				/WEB-INF/customers/failure.jsp
+			</result></action>
 	</package>
 </struts>
