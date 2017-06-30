@@ -216,6 +216,13 @@ jdbc丟回來就是一個for object
 帶一點OGNL input form 怎麼結合model 與 controller
 
 FK與下拉式功能表aliasid
+驗證的確有5筆
+[com.cht.domain.Alias@3b60fc65, com.cht.domain.Alias@5c5a6957, com.cht.domain.Alias@33b9fe1f, com.cht.domain.Alias@77dabfc0, com.cht.domain.Alias@3a6313b9]
+
+s:select 預設call toString method 所以要override
+但是還是沒完全解決 key value
+label是前面的TD名稱文字提示
+
 
 JAX-RS (rest)
 

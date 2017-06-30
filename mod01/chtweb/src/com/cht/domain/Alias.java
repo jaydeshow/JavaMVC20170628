@@ -15,4 +15,9 @@ public class Alias {
 	public void setAlias(String alias) {
 		this.alias = alias;
 	}
+	
+	//Overriding toString method
+	public String toString(){
+		return alias;
+	}
 }
