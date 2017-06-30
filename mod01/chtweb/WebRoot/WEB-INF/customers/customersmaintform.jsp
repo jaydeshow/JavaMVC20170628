@@ -40,7 +40,35 @@
 		$('#btnValid').click(
 		//事件程序
 		function() {
-			alert("click!!")
+			//alert("click!!")
+			/* $.ajax({
+				url : "http://localhost:8080/chtweb/service/hello/chthello",
+				success : function(result) {
+					$("#div1").html(result);
+					alert("GET成功!!")
+				}
+			}); */
+			/* $.getJSON("http://localhost:8080/chtweb/service/hello/chthello", function(result) {
+				$.each(result, function(i, field) {
+					$("div").append(field + " ");
+				});
+			}); */
+			
+			//選擇文字輸入方塊(客戶編號id)
+			var cid =$('#customerid');
+			var cidvalue = cid.val();
+			var urlString = "http://10.131.35.7:8080/chtweb/service/customers/cidvalid?cid=" + cidvalue;
+			//alert(cidvalue);
+			//ajax非同步呼叫後端服務傳遞資訊或取回傳的json
+			$.ajax({
+				url : urlString,
+				type: 'GET',
+				//成功回乎程序
+				success : function(result,status,xhr) {
+					alert("GET成功!!" + result)
+				}
+			});
+
 		});
 	});
 </script>
@@ -58,7 +86,7 @@
 				<tr>
 					<td>客戶編號</td>
 					<td><s:textfield name="customers.customerid"
-							style="width:200px"></s:textfield> <input type="button"
+							style="width:200px" id="customerid"></s:textfield> <input type="button"
 						value="驗證客戶編號..." /></td>
 					<td><input type="button" value="驗證客戶編號...2" id="btnValid" /></td>
 				</tr>
@@ -84,10 +112,12 @@
 				</tr>
 
 			</table>
-			<s:submit value="傳送" ></s:submit>
+			<s:submit value="傳送"></s:submit>
 		</s:form>
 	</fieldset>
 
 	<s:property value="alias" />
+
+	<div id="div1"></div>
 </body>
 </html>

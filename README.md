@@ -230,7 +230,26 @@ https://stackoverflow.com/questions/22420421/setting-a-struts2-select-tag-to-a-v
 down一下jquery的框架 
 cross site issue?
 
+覺得礙眼jquery
+https://stackoverflow.com/questions/4282448/change-eclipse-settings-to-ignore-errors-on-a-specific-file
+
 JAX-RS (rest)
 安裝2.0
+六月 30, 2017 11:35:25 上午 org.apache.catalina.core.StandardContext loadOnStartup
+嚴重: Servlet [JAX-RS Servlet] in web application [/chtweb] threw load() exception
+jax-rs api
+https://docs.oracle.com/javaee/7/api/javax/ws/rs/package-summary.html
+javax.ws.rs
+Annotation Type Path
+mime types 
+javax.ws.rs
+Annotation Type Produces
+http://localhost:8080/chtweb/service/hello/chthello 亂碼!用html之類
 
+https://github.com/google/gson
+後來直接抓gson .jar
+http://localhost:8080/chtweb/service/customers/cidvalid?cid=001
 
+XMLHttpRequest cannot load http://10.131.35.7:8080/chtweb/service/customers/cidvalid?cid=C001. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8080' is therefore not allowed access. The response had HTTP status code 403.
+cross site
+安全性考量 不是那麼簡單

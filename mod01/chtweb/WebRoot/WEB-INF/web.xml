@@ -28,10 +28,17 @@
     <description>JAX-RS Tools Generated - Do not modify</description>
     <servlet-name>JAX-RS Servlet</servlet-name>
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <!-- 初始參數設定 指定一個package ,name只能參照
+    	https://segmentfault.com/a/1190000002489170
+    -->
+    <init-param>
+    	<param-name>jersey.config.server.provider.packages</param-name>
+    	<param-value>com.cht.service</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>JAX-RS Servlet</servlet-name>
-    <url-pattern>/jaxrs/*</url-pattern>
+    <url-pattern>/service/*</url-pattern>
   </servlet-mapping>
 </web-app>
