@@ -25,5 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     ${message} <br>
     ${dao} <br>
+    ${result} <br>
   </body>
 </html>
