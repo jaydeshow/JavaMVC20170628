@@ -65,7 +65,10 @@
 				type: 'GET',
 				//成功回乎程序
 				success : function(result,status,xhr) {
-					alert("GET成功!!" + result.msg)
+					//alert("GET成功!!" + result.msg)
+					$('#msg').text(result.msg);
+				},
+				error:function(xhr,status,error){
 				}
 			});
 
@@ -89,6 +92,7 @@
 							style="width:200px" id="customerid"></s:textfield> <input type="button"
 						value="驗證客戶編號..." /></td>
 					<td><input type="button" value="驗證客戶編號...2" id="btnValid" /></td>
+					<td><label id="msg">1111</label></td>
 				</tr>
 				<tr>
 					<td>公司名稱</td>

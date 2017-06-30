@@ -255,3 +255,5 @@ cross site
 安全性考量 不是那麼簡單
 
 先用localhost  result.msg (json tag)
+鋪到label
+
