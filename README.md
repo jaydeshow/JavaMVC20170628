@@ -222,7 +222,8 @@ FK與下拉式功能表aliasid
 s:select 預設call toString method 所以要override
 但是還是沒完全解決 key value
 label是前面的TD名稱文字提示
-
+找到!! listValue = "alias" listKey="aliasid" 
+https://stackoverflow.com/questions/22420421/setting-a-struts2-select-tag-to-a-variable-from-the-request-object
 
 JAX-RS (rest)
 
