@@ -231,4 +231,6 @@ down一下jquery的框架
 cross site issue?
 
 JAX-RS (rest)
+安裝2.0
+
 
