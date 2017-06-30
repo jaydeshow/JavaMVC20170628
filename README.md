@@ -264,3 +264,5 @@ https://onsen.io/
 還沒講到 listener interceptor 
 把controller當一個bean來佈署
 給spring裡面的bean id可以對過來嗎 可以
+
+spring 注入 jdbcTemplate到controller中(當成bean) 可以抽換 config

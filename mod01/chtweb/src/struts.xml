@@ -27,7 +27,8 @@
 		<action name="beanshow" class="beanID" method="doIt">
 			<result name="success" type="dispatcher">
 				/WEB-INF/beanshow.jsp
-			</result></action>
+			</result>
+		</action>
 	</package>
 	<package name="customers" namespace="/customers" extends="struts-default">
 		<action name="customersform" class="com.cht.domain.CustomersController">

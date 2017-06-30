@@ -27,5 +27,6 @@
 	<!-- Contoller as Bean -->
 	<bean id="beanID" class="com.cht.domain.BeanController">
 		<property name="message" value="您好!!中華電信"></property>
+		<property name="dao" ref="jdbcTemplate"></property>
 	</bean>
 </beans>
