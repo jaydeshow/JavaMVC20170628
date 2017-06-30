@@ -149,7 +149,11 @@ public class ChtCustomersController extends ActionSupport {
 	// 新增客戶資料
 	public String execute() {
 		customers = new Customers();
-		customers.setCustomerid("C001");
+		customers.setCustomerid("001");
+		customers.setCompanyname("種花店");
+		customers.setAddress("台北市");
+		customers.setPhone("02-23445555");
+		customers.setAliasid(2);
 		return SUCCESS;
 	}
 	

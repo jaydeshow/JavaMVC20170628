@@ -69,6 +69,7 @@
 					$('#msg').text(result.msg);
 				},
 				error:function(xhr,status,error){
+					alert(error)
 				}
 			});
 
@@ -111,7 +112,7 @@
 				<tr>
 					<td>地區</td>
 					<td><s:select list="alias" name="customers.aliasid" label="區域"
-							listValue="alias" listKey="aliasid" value="1" headerKey="-1"
+							listValue="alias" listKey="aliasid" value="customers.aliasid" headerKey="-1"
 							headerValue="--請挑選--"></s:select></td>
 				</tr>
 
